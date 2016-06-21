@@ -45,7 +45,7 @@ world <- map_data("world")
 
 #plot inset map
 insetMap = ggplot() + 
-           geom_polygon(data = world, aes(x=long, y = lat, group = group))+
+           geom_polygon(data = world, aes(x=long, y = lat, group = group), fill="grey90")+
            geom_rect(aes(ymin=-66,ymax=-55,xmin=-60,xmax=-55), colour="red", fill="red")+
            coord_cartesian(x=c(-110, -30), y=c(-80, 10))+
            scale_x_discrete(expand=c(0, 0))+
