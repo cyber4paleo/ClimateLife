@@ -47,7 +47,8 @@ world <- map_data("world")
 insetMap = ggplot() + 
            geom_polygon(data = world, aes(x=long, y = lat, group = group))+
            geom_rect(aes(ymin=-66,ymax=-55,xmin=-60,xmax=-55), colour="red", fill="red")+
-           coord_cartesian(x=c(-110, -30), y=c(-85, 10))+
+           coord_cartesian(x=c(-110, -30), y=c(-80, 10))+
+           scale_x_discrete(expand=c(0, 0))+
            theme(axis.text.x=element_blank(),
                  axis.text.y=element_blank(),
                  axis.ticks=element_blank(),
@@ -57,11 +58,13 @@ insetMap = ggplot() +
                  plot.background=element_blank())
 
 #render map with inset map
+pdf("figures/proxy_locations.pdf", width=8, height=8)
 grid.newpage()
 v1<-viewport(width = 1, height = 1, x = 0.5, y = 0.5) #plot area for the main map
-v2<-viewport(width = 0.2, height = 0.3, x = 0.33, y = .845) #plot area for the inset map
+v2<-viewport(width = 0.25, height = 0.3, x = 0.2, y = .845) #plot area for the inset map
 print(myMap,vp=v1) 
 print(insetMap,vp=v2)
+dev.off()
 
 ##################################################################################################################################################
 ## Parse Linked Earth data
