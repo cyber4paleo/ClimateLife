@@ -1,0 +1,8 @@
+% caption for map
+Figure XXX shows locations for the paleoclimate proxy records. These records come from the Linked Earth Wiki, NOAA Paleo, and Neotoma.
+
+%caption for proxy_diagrams
+Figure XXX shows the paleoclimate proxy records as a function of time. The sea surface temperature (SST) and surface temperature (TS) records are shown on the left, while the remaining panels represent pollen proportions (PSU, UNK1, UNK5, UNK6, PSB).
+
+%caption for scatter
+Paleoclimate proxies were interpolated in order to compare records at common time points. Pairwise comparisons were done using scatter plots and correlations. There are some strong and significant correlations among pollen proportions, but perhaps most notable is the strong correlation between surface temperature (TS) and the pollen type UNK1. Futher analysis needs to be done to better understand this relationship.
